@@ -1,0 +1,13 @@
+@use './node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use './node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@use './node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@use './node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+
+@use './scss/base/base';
+@use './scss/components/navbar';
+
+@use './scss/layout/home';
+@use './scss/layout/portfolio';
+@use './scss/layout/about';
+@use './scss/layout/contact';
+@use './scss/layout/blog';

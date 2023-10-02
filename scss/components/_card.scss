@@ -1,0 +1,57 @@
+@use '../asset/variables';
+@use '../asset/mixins';
+.card {
+	perspective: 150rem;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	&:first-child,
+	&:nth-child(6) {
+		@include mixins.create-mq(600px) {
+			grid-column-end: span 2;
+			grid-row-end: span 2;
+		}
+	}
+	&:nth-child(4),
+	&:nth-child(5) {
+		@include mixins.create-mq(600px) {
+			grid-column-end: span 2;
+		}
+	}
+	&__side {
+		width: 100%;
+		height: 100%;
+		transition: all 0.8s ease;
+
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
+
+		&--front {
+			position: relative;
+			line-height: 0;
+		}
+
+		&--back {
+			transform: rotateY(180deg);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			background-color: variables.$color-white;
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+}
