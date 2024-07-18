@@ -3,11 +3,11 @@
 @use './node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
 @use './node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
 
-@use './scss/base/base';
-@use './scss/components/navbar';
+@use './base/base';
+@use './components/navbar';
 
-@use './scss/layout/home';
-@use './scss/layout/portfolio';
-@use './scss/layout/about';
-@use './scss/layout/contact';
-@use './scss/layout/blog';
+@use './layout/home';
+@use './layout/portfolio';
+@use './layout/about';
+@use './layout/contact';
+@use './layout/blog';

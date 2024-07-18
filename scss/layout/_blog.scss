@@ -1,66 +1,66 @@
-@use '../asset/mixins';
-@use '../asset/variables';
+@use '../asset/mixins' as *;
+@use '../asset/variables' as *;
 
 .blog {
-	&__flex {
-		@include mixins.flex(row, space-between, flex-start, wrap);
-		row-gap: 50px;
-		&-item {
-			width: 100%;
-			@include mixins.create-mq(960px) {
-				width: calc(50% - 30px);
-			}
-			figure {
-				margin: 0;
-				position: relative;
-				overflow: hidden;
-				line-height: 0;
-				border-radius: 4px;
-				a {
-					display: block;
-					img {
-						width: 100%;
-					}
-				}
-				.post-date {
-					position: absolute;
-					top: 25px;
-					right: 25px;
-					line-height: 2;
-					color: #fff;
-					background: #daa520;
-					padding: 5px 10px;
-					border-radius: 4px;
-					text-align: center;
-					text-transform: uppercase;
-					@include mixins.flex(column, center, center, nowrap);
-				}
-			}
-			a {
-				h4 {
-					color: variables.$color-black;
-					text-transform: uppercase;
-					font-weight: 600;
-					font-size: 21px;
-					margin: 24px 0 12px;
-					transition: color 0.3s;
-				}
-				&:hover {
-					h4 {
-						color: variables.$color-secondary-light;
-					}
-				}
-			}
+  &__flex {
+    @include flex(row, space-between, flex-start, wrap);
+    row-gap: 50px;
+    &-item {
+      width: 100%;
+      @include create-mq(960px) {
+        width: calc(50% - 30px);
+      }
+      figure {
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        line-height: 0;
+        border-radius: 4px;
+        a {
+          display: block;
+          img {
+            width: 100%;
+          }
+        }
+        .post-date {
+          position: absolute;
+          top: 25px;
+          right: 25px;
+          line-height: 2;
+          color: #fff;
+          background: #daa520;
+          padding: 5px 10px;
+          border-radius: 4px;
+          text-align: center;
+          text-transform: uppercase;
+          @include flex(column, center, center, nowrap);
+        }
+      }
+      a {
+        h4 {
+          color: $color-black;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 21px;
+          margin: 24px 0 12px;
+          transition: color 0.3s;
+        }
+        &:hover {
+          h4 {
+            color: $color-secondary-light;
+          }
+        }
+      }
 
-			.blog-excerpt {
-				p {
-					margin-bottom: 25px;
-				}
-			}
-		}
-		.allposts {
-			width: 100%;
-			@include mixins.flex(row, center, center, nowrap);
-		}
-	}
+      .blog-excerpt {
+        p {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .allposts {
+      width: 100%;
+      @include flex(row, center, center, nowrap);
+    }
+  }
 }

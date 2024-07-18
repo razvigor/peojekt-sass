@@ -10814,7 +10814,9 @@ main {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: #fff;
+  background-color: #555;
+  color: #fff;
+  font-size: 14px;
 }
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
@@ -10826,7 +10828,6 @@ main {
 .card__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   gap: 10px;
 }
 @media screen and (min-width: 600px) {
