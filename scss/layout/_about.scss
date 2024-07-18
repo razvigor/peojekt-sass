@@ -1,5 +1,4 @@
-@use '../asset/mixins' as *;
-@use '../asset/variables' as *;
+@use '../asset' as *;
 
 .personal {
   @include flex(row, space-between, center, wrap);

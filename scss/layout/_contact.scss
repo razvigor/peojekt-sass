@@ -1,5 +1,4 @@
-@use '../asset/mixins' as *;
-@use '../asset/variables' as *;
+@use '../asset' as *;
 
 .contact {
   &__flex {

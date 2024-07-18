@@ -1,5 +1,5 @@
-@use '../asset/variables' as *;
-@use '../asset/mixins' as *;
+@use '../asset' as *;
+
 .card {
   perspective: 150rem;
   position: relative;

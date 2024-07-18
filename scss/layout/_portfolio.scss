@@ -1,5 +1,4 @@
-@use '../components/card' as *;
-@use '../asset/mixins' as *;
+@use '../asset' as *;
 .card__list {
   display: flex;
   flex-direction: column;

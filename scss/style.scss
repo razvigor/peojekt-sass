@@ -1,13 +1,9 @@
-@use './node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@use './node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
-@use './node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
-@use './node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@use '../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@use '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@use '../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
 
-@use './base/base';
-@use './components/navbar';
+@use './base';
+@use './components';
 
-@use './layout/home';
-@use './layout/portfolio';
-@use './layout/about';
-@use './layout/contact';
-@use './layout/blog';
+@use './layout';
