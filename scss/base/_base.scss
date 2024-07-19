@@ -1,16 +1,16 @@
 @use '../asset/' as *;
 
 *,
-*::after,
-*::before {
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
-  color: #555;
-  background-color: #fff;
+  color: $color-black;
   font-weight: 400;
 }
 img {
@@ -18,7 +18,7 @@ img {
 }
 ul,
 ol {
-  @include reset-list();
+  @include reset-list;
 }
 a {
   text-decoration: none;
@@ -30,10 +30,6 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5;
-}
-p {
-  line-height: 2;
 }
 .container {
   max-width: 1170px;
@@ -65,14 +61,14 @@ p {
   }
   .title-head-subtitle {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     text-transform: uppercase;
     font-size: 15px;
-    color: $color-black;
+    counter-reset: $color-black;
     margin: 20px 0 0;
     opacity: 0.8;
     padding: 0 30px;
-    background: $color-white;
+    background-color: $color-white;
     &::before {
       content: '';
       position: absolute;
@@ -99,17 +95,18 @@ p {
     }
   }
 }
+
 .btn {
   height: 48px;
   padding: 0 33px;
   border-radius: 24px;
   line-height: 48px;
   text-transform: uppercase;
-  border: 1px solid #daa520;
+  border: 1px solid $color-secondary-light;
   overflow: hidden;
   position: relative;
   outline: none;
-  display: inline-block;
+  display: inline-flex;
   span {
     display: inline-flex;
     width: 100%;
@@ -117,23 +114,23 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2;
     column-gap: 8px;
     white-space: nowrap;
+    z-index: 2;
   }
   &__first {
-    background-color: #daa520;
-    color: #fff;
+    background-color: $color-secondary-light;
+    color: $color-white;
     &::after {
       content: '';
       position: absolute;
       width: 128%;
       height: 100%;
-      top: 0;
-      left: -142%;
       transform: skew(-12deg);
       transition: left 0.6s;
-      background-color: #555;
+      background-color: $color-black;
+      top: 0;
+      left: -142%;
     }
     &:hover::after {
       left: 0;
@@ -142,14 +139,12 @@ p {
   &__second {
     background-color: transparent;
     span {
-      color: #daa520;
+      color: $color-secondary-light;
       transition: color 0.3s;
       i {
-        color: #daa520;
-        transition: color 0.3s;
+        color: $color-secondary-light;
       }
     }
-
     &::after {
       content: '';
       position: absolute;
@@ -159,19 +154,20 @@ p {
       left: -142%;
       transform: skew(-12deg);
       transition: left 0.6s;
-      background-color: #daa520;
+      background-color: $color-secondary-light;
     }
     &:hover::after {
       left: 0;
     }
     &:hover span {
-      color: #fff;
+      color: $color-white;
     }
     &:hover span i {
-      color: #fff;
+      color: $color-white;
     }
   }
 }
+
 main {
   padding: 0 16px 50px;
   @include create-mq(1180px) {
